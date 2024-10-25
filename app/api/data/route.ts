@@ -1,11 +1,9 @@
 
-
-import { useAuth } from "@clerk/nextjs";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const { userId } = useAuth();
+  const { userId }:any = auth();
   const user = await currentUser();
 
   if (!userId) {

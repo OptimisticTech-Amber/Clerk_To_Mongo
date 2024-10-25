@@ -1,11 +1,11 @@
 
-import { useAuth, UserProfile } from "@clerk/nextjs";
+import { UserProfile } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import React from "react";
-import {  currentUser } from "@clerk/nextjs/server";
+import {  auth, currentUser } from "@clerk/nextjs/server";
 
 const Profile = async () => {
-  const { userId } = useAuth()
+  const { userId }:any = auth()
   const isAuth = !!userId;
   const user = await currentUser();
 
