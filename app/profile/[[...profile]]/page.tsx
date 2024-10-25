@@ -1,4 +1,4 @@
-"use client"
+
 import { useAuth, UserProfile } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 import React from "react";
