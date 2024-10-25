@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useAuth } from "@clerk/nextjs";
 import { auth, currentUser } from "@clerk/nextjs/server";
