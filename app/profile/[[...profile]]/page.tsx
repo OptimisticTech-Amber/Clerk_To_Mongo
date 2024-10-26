@@ -5,7 +5,7 @@ import React from "react";
 import {  auth, currentUser } from "@clerk/nextjs/server";
 
 const Profile = async () => {
-  const { userId }:any = auth()
+  const { userId }= auth()
   const isAuth = !!userId;
   const user = await currentUser();
 
